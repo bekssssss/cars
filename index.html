@@ -8,26 +8,47 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./media.css">
 
     <title>maket-3</title>
 </head>
 <body>
     <header>
         <div class="container">
+            
+             
+
             <div class="header-text">
                 <div class="header-logo">
                     Premium
                    <span>
                     CAR
                    </span>
+                      <div class="navbar">
+                    <div class="burger" onclick="toggleMenu()">
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                    </div>
+                    <ul class="menu" id="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <span></span>
+                    </ul>
+            </div>
+
                 </div>
-                <div class="header-center">
-                    <a href="#">Home</a>
-                    <a href="#">Recipes</a>
-                    <a href="#">Article</a>
-                    <a href="#">Contact</a>
-                    <a href="#">Purchase</a>
-                </div>
+                
+                <!-- <div class="header-center">
+                    <a href="#home">Home</a>
+                    <a href="#reciepes">Recipes</a>
+                    <a href="#article">Article</a>
+                    <a href="#contacts">Contact</a>
+                    <a href="#purchase">Purchase</a>
+                </div> -->
+
                 <div class="search-svg">
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8125 11.2762L15.7567 15.4843C16.0904 15.8403 16.0794 16.4079 15.7326 16.7502C15.5694 16.9114 15.3544 17 15.1278 17C14.8883 17 14.6649 16.9024 14.4988 16.7255L10.5246 12.4854C9.39609 13.299 8.07619 13.7275 6.69113 13.7275C3.0017 13.7275 0 10.6484 0 6.86374C0 3.07913 3.0017 0 6.69113 0C10.3806 0 13.3823 3.07913 13.3823 6.86374C13.3823 8.48359 12.8266 10.0396 11.8125 11.2762ZM11.6367 6.86374C11.6367 4.06632 9.4182 1.79054 6.69113 1.79054C3.96406 1.79054 1.74551 4.06632 1.74551 6.86374C1.74551 9.66117 3.96406 11.9369 6.69113 11.9369C9.4182 11.9369 11.6367 9.66117 11.6367 6.86374Z" fill="#929EAF"/>
@@ -471,14 +492,14 @@
     </div>
    </div>
 </section>
+</main>
    <footer class="up-foot">
     <div class="container">
         <div class="footer-text">
            <div class="foot-col-1">
             <div class="footer-logo">
                 Premium
-                <span>
-                 CAR
+ы                 CAR
                 </span>
             </div>
             <p>
@@ -602,7 +623,11 @@
              </div>   
     </div>
    </footer>
-
-</main>
+      <script>
+    function toggleMenu() {
+      var menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>

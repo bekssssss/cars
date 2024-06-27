@@ -5,11 +5,7 @@
     box-sizing: border-box;
 }
 
-body {
-    background-image: url(../background.jpg);
-    background-repeat: no-repeat;
-    background-size: 100vh;
-}
+
 
 
 .pt-sans-regular {
@@ -39,11 +35,17 @@ body {
 
 
   .header-logo span {
-    border-radius: 8px;
+    padding: 2px;
+    border-radius: 2px;
     background-color: rgb(74, 144, 226);
   }
 
-
+  .header-logo {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
 
   .header-text {
@@ -53,10 +55,10 @@ body {
 
 
 
-
+/* 
   .header-center {
     display: flex;
-    gap: 15px;
+    gap: 25px;
   }
 
 
@@ -66,8 +68,76 @@ body {
     text-decoration: none;
     color: aliceblue;
   }
+   */
 
+      .navbar {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+      }
 
+      .burger {
+        width: 30px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      .burger-line {
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        border-radius: 2px;
+        transition: transform 0.3s, opacity 0.3s;
+      }
+
+      .menu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 287px;
+        width: 300px;
+        background-color: #333;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.3s ease-in-out;
+        z-index: 1;
+      }
+
+      .menu.active {
+        transform: scaleY(1);
+      }
+
+      .menu li {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #555;
+      }
+
+      .menu li:last-child {
+        border-bottom: none;
+      }
+
+      .menu a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        transition: color 0.3s;
+      }
+
+      .menu a:hover {
+        color: #f00;
+      }
 
 
   .row {
@@ -120,7 +190,6 @@ body {
     padding: 0 15px;
     left: 10px;
 }
-
 
 
 
